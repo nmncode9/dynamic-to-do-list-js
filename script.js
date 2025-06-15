@@ -27,6 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    addButton.addEventListener("click", addTask)
+    addButton.addEventListener("click", addTask);
+    taskInput.addEventListener("keypress", () => {
+        let key = event.key;
+        if (key == "Enter") {
+            addTask();
+        }
+        
+    })
 
 });
